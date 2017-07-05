@@ -9,18 +9,46 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 */
 var numeroSecreto; 
 var contadorIntentos;
+var num;
 
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
 	 
 		//alert(numeroSecreto );
-	
+	numerosecreto=Math.floor((Math.random()*(100-1)+1))
+  alert(numerosecreto)
+  contadorintentos=0
+
 
 }
 
 function verificar()
 {
-	
-	
+ 
+  contadorintentos+=1
+documnet.getElementById("intentos").value=contadorintentos;
+num=document.getElementById("numero").value;
+
+//num=document.getElementById("numero").value
+//contadorintentos=document.getElementById("intentos").value
+
+if(num==numerosecreto)
+{
+  alert("acertaste, en un solo"+contadorintentos+"intento");
 }
+else
+{
+  if(num<numerosecreto)
+  {
+    parseInt()
+    alert("te falta un poco"+(numerosecreto-num));
+  }
+  else
+ {
+   alert("te pasaste")
+ }
+}
+}
+}
+
