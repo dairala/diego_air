@@ -7,8 +7,8 @@ secreto del 1 al 100, en la pantalla del juego
 “Usted es un ganador!!! y en solo X intentos”.
 de no ser igual se debe informar si “falta…”  para llegar al número secreto  o si “se pasó…”  del número secreto.
 */
-var numeroSecreto; 
-var contadorIntentos;
+var numerosecreto;
+var contador;
 var num;
 
 function comenzar()
@@ -18,7 +18,7 @@ function comenzar()
 		//alert(numeroSecreto );
 	numerosecreto=Math.floor((Math.random()*(100-1)+1))
   alert(numerosecreto)
-  contadorintentos=0
+  contador=0
 
 
 }
@@ -26,8 +26,8 @@ function comenzar()
 function verificar()
 {
  
-  contadorintentos+=1
-documnet.getElementById("intentos").value=contadorintentos;
+contador++
+documnet.getElementById("intentos").value=contador;
 num=document.getElementById("numero").value;
 
 //num=document.getElementById("numero").value
@@ -35,14 +35,13 @@ num=document.getElementById("numero").value;
 
 if(num==numerosecreto)
 {
-  alert("acertaste, en un solo"+contadorintentos+"intento");
+  alert("acertaste, en tan solo"+contador+"intento");
 }
 else
 {
   if(num<numerosecreto)
   {
-    parseInt()
-    alert("te falta un poco"+(numerosecreto-num));
+    alert("te falta un poco");
   }
   else
  {
