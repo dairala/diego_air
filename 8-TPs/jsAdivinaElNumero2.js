@@ -11,18 +11,32 @@ Más de 10 intentos: “afortunado en el amor!!”.*/
 
 var numeroSecreto; 
 var contadorIntentos;
+var num;
+
 
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
-	 
+	 numerosecreto=Math.floor((Math.random()*(100-1)+1))
+	 alert(numeroSecreto);
+	 contadorIntentos=0;
+
 	
 
 }
 
 function verificar()
 {
-	
-	
+	contadorIntentos++;
+	document.getElementById("intentos").value=contadorIntentos;
+	num=document.getElementById("numero").value;
+	if(num==numerosecreto)
+	{
+		alert("acertaste, en tan solo"+contador+"intento");
+	}
+	else
+	{
+		
+	}
 
 }
