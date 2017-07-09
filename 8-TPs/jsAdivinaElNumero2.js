@@ -9,7 +9,7 @@
 Desde  6 Intentos hasta 10:”falta técnica”
 Más de 10 intentos: “afortunado en el amor!!”.*/
 
-var numeroSecreto; 
+var numerosecreto; 
 var contadorIntentos;
 var num;
 
@@ -18,7 +18,7 @@ function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
 	 numerosecreto=Math.floor((Math.random()*(100-1)+1))
-	 alert(numeroSecreto);
+	 alert(numerosecreto);
 	 contadorIntentos=0;
 
 	
@@ -30,13 +30,55 @@ function verificar()
 	contadorIntentos++;
 	document.getElementById("intentos").value=contadorIntentos;
 	num=document.getElementById("numero").value;
-	if(num==numerosecreto)
+	if(num==numerosecreto&&contadorIntentos==1)
 	{
-		alert("acertaste, en tan solo"+contador+"intento");
+		alert("Usted es un psiquico"+contadorIntentos+"Intento");
 	}
 	else
 	{
-		
+		if(num==numerosecreto&&contadorIntentos==2)
+		{
+			alert("Excelente percepcion, en"+contadorIntentos+"Intentos");
+		}
+		else
+		{
+			if(num==numerosecreto&&contadorIntentos==3)
+			{
+				alert("Esto es suerte, en"+contadorIntentos+"Intentos");
+			}
+			else
+			{
+				if(num==numerosecreto&&contadorIntentos==4)
+				{
+					alert("Excelente tecnica, en"+contadorIntentos+"Intentoss");
+				}
+				else
+				{
+					if(num==numerosecreto&&contadorIntentos==5)
+					{
+						alert("Esta esta en la media, en"+contadorIntentos+"Intentos");
+					}
+					else
+					{
+						if(num==numerosecreto&&contadorIntentos>5&&contadorIntentos<11)
+						{
+							alert("Falta mas tecnica, en"+contadorIntentos+"Intentos");
+						}
+						else
+						{
+							if(num==numerosecreto&&contadorIntentos>10)
+							{
+								alert("Afortunado en elamor, en"+contadorIntentos+"intentos");
+							}
+							else
+							{
+								alert("Vuelve a intentarlo");
+							}
+						}
+				}
+			}
+		}
 	}
+}
 
 }
