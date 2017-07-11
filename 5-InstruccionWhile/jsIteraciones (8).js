@@ -7,26 +7,27 @@ function Mostrar()
 	var dato;
 	var respuesta="si";
 	
-	while(respuesta=="si"||dato>0)
+	while(respuesta=="si")
 	{
+		contador++;
 		dato=prompt("ingrese un numero, positivos se sumaran negativos se multiplicaran");
 		dato=parseInt(dato);
-		positivo=positivo+dato;
-		contador++;
+		if(dato>=0)
+		{
+			positivo=positivo+dato;
+		}
+		else
+		{
+			negativo=negativo*dato;
+		}
+		
 		respuesta=prompt("Desea proseguir,si o no");
+		
 	}
-
-	    document.getElementById('suma').value=positivo;
-    while(respuesta=="si"||dato<0)
-	{
-		dato=prompt("ingrese un numero, positivos se sumaran negativos se multiplicaran");
-		dato=parseInt(dato);
-		negativo=negativo*dato;
-		contador++;
-		respuesta=prompt("Desea proseguir,si o no");
-	}
+	document.getElementById('suma').value=positivo;
+	document.getElementById('producto').value=negativo;   
+  
 
 
-document.getElementById('producto').value=negativo;
 
 }//FIN DE LA FUNCIÓN
