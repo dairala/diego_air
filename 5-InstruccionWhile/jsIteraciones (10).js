@@ -29,32 +29,38 @@ function Mostrar()
 	}
 	if(num<0)
 	{
+		parseInt(acumuladorneg);
 		acumuladorneg=acumuladorneg+num;
 	}
 	else 
 	{
 		if(num>0)
 		{
+			parseInt(acumuladorpos);
 			acumuladorpos=acumuladorpos+num;
 		}
 		else
 		{
 			if(num>0)
 			{
+				parseInt(contadorpos);
 				contadorpos++;
 			}
 			else
 			{
+				parseInt(contadorceros);
 				contadorceros++;
 			}
 			if(num<0)
 		    {
+				parseint(contadorneg);
 				contadorneg++;
 			}
 			else
 			{
 				if(num%2==0)
 				[
+					parseInt(contadorpares)
 					contadorpares++
 				]
 			}
