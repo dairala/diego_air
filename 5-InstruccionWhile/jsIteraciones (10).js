@@ -59,10 +59,10 @@ function Mostrar()
 			else
 			{
 				if(num%2==0)
-				[
+				{
 					parseInt(contadorpares)
 					contadorpares++
-				]
+				}
 			}
 		}
 	}
