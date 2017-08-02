@@ -5,12 +5,14 @@ function Mostrar()
 	var base;
 	var resultado;
 
-	base=document.getElementById("lado").value
-	
+	base=document.getElementById("lado").value;
 	base=parseInt(base);
 
 	resultado=base*3;
-	alert("El perimetro del trianculo es"+ resultado);
+
+	alert("El perimetro del triangulo es"+resultado);
+
+
 	
 }
 

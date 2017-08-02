@@ -2,7 +2,7 @@ function Mostrar()
 {
     var dia;
 
-    dia=prompt("ingrese un dia");
+    dia=prompt("Ingrese un dia");
 
     switch(dia)
     {
@@ -13,7 +13,7 @@ function Mostrar()
         alert("Es fin de semana");
         break;
         default:
-        alert("a trabajar");
+        alert("A trabajar!!!");
     }
 
 }

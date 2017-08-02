@@ -4,46 +4,44 @@ function Mostrar()
 	//alert("Funciona 6-iteraciones");
 	var venta;
 	var contador=0;
-	var max;
 	var min;
+	var max;
 	var bandera=true;
 
-	while(contador<7)
+	while(contador<5)
 		{
-			venta=prompt("Ingrese un importe en peses");
+			venta=prompt("Ingrese un importe");
 			venta=parseInt(venta);
 			contador++;
 
 			while(isNaN(venta))
 				{
-					venta=prompt("Ingrese un importe valido y numerico");
+					venta=prompt("Ingrese un importe que sea numerico");
 				}
 
 			while(venta<=0)
 				{
-					venta=prompt("Ingrese un importe valido");
+					venta=prompt("Ingrese un importe mayor a cero");
 				}
 
-		if(bandera==true)
-			{
-				max=venta;
-				min=venta;
-				bandera=false;
-			}
-			else if(venta>max)
+			if(bandera==true)
 				{
 					max=venta;
+					min=venta;
+					bandera=false;
 				}
-				else if(venta<min)
+				else if(venta>max)
 					{
-						min=venta;
+						max=venta;
 					}
-			
+					else if(venta<min)
+						{
+							min=venta;
+						}
 
 		}
-	
-alert("El importe maximo es"+max+"pesos");
-alert("El importe minimo es"+min+"pesos");
+	alert("El importa mayor fue de"+max+"pesos");
+	alert("El importe mas bajo fue de"+min+"pesos");
 
 }
 

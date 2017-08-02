@@ -15,8 +15,9 @@ function Mostrar()
 		alert("Veranito!!!");
 		break;
 		default:
-		alert("Extraño enero y febrero");
+		alert("Extaño enero y febrero");
 	}
-	
+
+
 }
 

@@ -2,45 +2,62 @@ function Mostrar()
 {
     var nota;
     var sexo;
-    var contalumnos=0;
-    var bandera=true;
+    var contador=0;
     var acumulador=0;
-    var baja;
-    var contadorvar;
+    var bandera=true;
+    var max;
+    var min;
+    var contadorvarones=0;
+    var promedio;
 
-    nota=prompt("ingrese nota");
-    
-
-    while(contalumnos<101)
-    {
-        
-        contalumnos++;
-        nota=prompt("ingrese nota");
-        nota=parseInt(nota);
-        sexo=prompt("ingrese sexo");
-        acumulador=acumulador+nota;
-
-        while(nota!<0||nota!>10)
+    while(contador<4)
         {
-            nota=prompt("ingrese nota");   
-            nota=parseint(nota);
+            sexo=prompt("Ingrese f (femenino) o m (masculino)");
+            nota=prompt("Ingrese la nota del alumno");
+            nota=parseInt(nota);
+            acumulador=acumulador+nota;
+            contador++;
+            
+            
+
+            while(isNaN(nota))
+                {
+                   nota=prompt("Ingrese la nota del alumno numeria"); 
+                }
+            while(sexo!="f" && sexo!="m")
+                {
+                   sexo=prompt("Ingrese SOLO f (femenino) o m (masculino)"); 
+                }
+            while(nota<0||nota>9)
+                {
+                    nota=prompt("Ingrese la nota del alumno de 0 a 10"); 
+                }
+
+            if(bandera==true)
+                {
+                    max=nota;
+                    min=nota;
+                    bandera=false;
+                }
+                else if(nota>max)
+                    {
+                        max=nota;
+                    }
+                    else if(nota<min)
+                        {
+                            min=nota;
+                        }
+                        if(sexo="m" && nota>5)
+                            {
+                                contadorvarones++;
+                            }
+                            
+            
         }
-
-        while(sexo!="f"&&sexo!="m")
-        {
-            sexo=prompt("ingrese sexo");
-        }
-
-        if(nota<11)
-        {
-            baja=nota;
-            alert(baja);
-        }
-
-
-
-    }
-
+        promedio=acumulador/contador;
+    alert("El promedio de todas las nota es"+promedio);
+    alert("La nota mas baja es"+min);
+    alert("La cantidad de varones con nota mayor a 6 son"+contadorvarones);
 
 
 

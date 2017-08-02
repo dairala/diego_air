@@ -3,66 +3,81 @@ function Mostrar()
 {
 	//alert("Funciona 7-iteraciones");
 	var nota;
+	var sexo;
+	var cantidadvarones=0;
+	var contador=0;
 	var max;
 	var min;
-	var promedio;
-	var contvarones=0;
-	var contador=0;
 	var bandera=true;
-	var sexo;
 	var acumulador=0;
+	var promedio;
 
-	while(contador<3)
+
+
+	while(contador<4)
 		{
-			sexo=prompt("Ingrese f o m");
-			nota=prompt("Ingrese nota del alumno/a");
+			sexo=prompt("Ingrese f (femenino) o m (masculino)");
+			nota=prompt("Ingrese una nota");
 			nota=parseInt(nota);
-			contador++;
+			
 			acumulador=acumulador+nota;
-			promedio=acumulador/contador;
+			
+			contador++;
 
+			
 
 			while(isNaN(nota))
 				{
-					nota=prompt("Ingrese nota del alumno/a valida");
+					nota=prompt("Ingrese una nota del tipo numerico");
 				}
 
-			while(sexo	!="f"	&& sexo	!="m")
+			while(nota<0||nota>10)
 				{
-					sexo=prompt("Ingrese f o m que sea valido");
+					nota=prompt("Ingrese una nota entre 0 y 10");
 				}
 
-			while(nota	<0 || nota	>10)
+			while(sexo!="f" && sexo!="m")
 				{
-					nota=prompt("Ingrese nota del alumno/a de 0 a 10");
+					sexo=prompt("Ingrese f (femenino) o m (masculino)");
 				}
 
 			if(bandera==true)
 				{
-					min=nota;
 					max=nota;
+					min=nota;
 					bandera=false;
 				}
 				else if(nota>max)
 					{
-						max=nota;
+						max=venta;
 					}
 					else if(nota<min)
 						{
 							min=nota;
 						}
-						else if(sexo=="m"	&&	nota>=6)
-							{
-								contvarones++;
-								
-							}
+					if(sexo="m" && nota>5)
+						{
+							cantidadvarones++;
+						}
 
 			
-		}
+			
 
-alert("El promedio de todas las notas es"+promedio);
-alert("La nota mas baja es"+min);
-alert("La cantidad de varones con nota mayor a 6 son"+contvarones);	
-	
+		}
+		promedio=acumulador/contador;
+
+
+	   alert("El promedio de todas las notas es de"+promedio);
+	   alert("La nota mas baja es un"+min);
+	   alert("La cantidad de varones con nota mayor igual a 6 son de"+cantidadvarones+"varones");
+
+
+	   
+
+
+
+
+
+
 }
 

@@ -2,22 +2,21 @@
 function Mostrar()
 {
 	//alert("Funciona 3-EntradaSalida");
-	var ancho;
-	var largo;
-	var resultado;
-	var alambre;
+var ancho;
+var largo;
+var resultado;
+var alambre;
 
-	ancho=document.getElementById("ancho").value;
-	largo=document.getElementById("largo").value;
+ancho=document.getElementById("ancho").value;
+largo=document.getElementById("largo").value;
 
-	ancho=parseInt(ancho);
-	largo=parseInt(largo);
+ancho=parseInt(ancho);
+largo=parseInt(largo);
 
-	resultado=largo*ancho;
-	alambre=resultado*6;
+resultado=(ancho*2)+(largo*2);
+alambre=resultado*6;
 
-	alert("Se necesitan"+alambre+"hilos de alambre para cubrir el terreno");
-
+alert("Se necesitan"+alambre+"hios de alambre para el terreno");
 
 	
 }

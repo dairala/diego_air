@@ -1,21 +1,19 @@
 function Mostrar()
 {
-    var ancho;
-    var largo;
-    var perimetro;
-    var alambre;
+  var ancho;
+  var largo;
+  var perimetro;
+  var alambre;
 
-    largo=document.getElementById("alrgo").value;
-    ancho=document.getElementById("ancho").value;
-    parseInt(largo);
-    parseInt(ancho);
+  largo=document.getElementById("alrgo").value;
+  ancho=document.getElementById("ancho").value;
 
-    perimetro=2*largo+2*ancho;
-    alert("el perimetro del terreno es"+perimetro);
-    alambre=3*perimetro;
-    parseInt(alambre);
-    alert("Se necesitan"+alambre+"hilos de alambre");
+  largo=parseInt(largo);
+  ancho=parseInt(ancho);
 
+  perimetro=(largo*2)+(ancho*2);
+  alambre=perimetro*3;
 
+  alert("Se necesitan"+alambre+"hilos de alambre para cubrir el terreno");
 
 }

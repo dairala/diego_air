@@ -2,14 +2,16 @@
 function Mostrar()
 {
 	//alert("Funciona 2-EntradaSalida");
-	var precio;
+	var importe;
+	var iva;
 	var resultado;
-	precio=prompt("Ingrese un precio");
-	precio=parseInt(precio);
 
-	resultado=precio*0.21;
+	importe=prompt("Ingrese un importe para agregarle el IVA");
+	importe=parseInt(importe);
+
+	iva=importe*0.21;
+	resultado=importe+iva;
 
 	document.getElementById("importe").value=resultado;
-	
 }
 

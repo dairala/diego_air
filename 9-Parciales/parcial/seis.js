@@ -1,49 +1,46 @@
 function Mostrar()
 {
-    var venta;
-    var contador=0;
-    var max;
-    var min;
-    var bandera=true;
+  var venta;
+  var contador=0;
+  var bandera=true;
+  var min;
+  var max;
 
-        while(contador<25)
+  while(contador<5)
     {
-        
-        venta=prompt("Ingrese venta");
+        venta=prompt("ingrese un importe");
         venta=parseInt(venta);
-        contador++;  
+        contador++;
 
-        while( venta < 0 )
-        {
-
-        }
-           if(bandera==true)
-          {
-              max=venta;
-              min=venta;
-              bandera=false;
-          }
-        
-             else
+        while(isNaN(venta))
             {
-                if(venta>max)
+                venta=prompt("ingrese un importe numerico");
+            }
+        
+        while(venta<0)
+            {
+                venta=prompt("ingrese un importe queno sea nulo");
+            }
+
+        if(bandera==true)
+            {
+                min=venta;
+                max=venta;
+                bandera=false;
+            }
+            else if(venta>max)
                 {
                     max=venta;
+
                 }
-                else
-                {
-                    if(venta<min)
+                else if(venta<min)
                     {
                         min=venta;
                     }
-                }
-            }
-
     }
 
-    alert("El maximo es"+max);
-    alert("El minimo es"+min);
-    
+    alert("El importe maximo es"+max);
+    alert("El importe menor es"+min);
 
 
 }
