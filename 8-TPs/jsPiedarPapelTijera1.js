@@ -49,4 +49,6 @@ function tijera()
         alert("Vuelve a intentarlo");
     }
 
+
+    //math.floor(math.random()*(100-1)+1)
 }//FIN DE LA FUNCIÓN
