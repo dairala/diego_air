@@ -51,4 +51,4 @@ function tijera()
 
 
     //math.floor(math.random()*(100-1)+1)
-}//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCIÓN//
